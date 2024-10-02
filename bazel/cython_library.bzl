@@ -73,9 +73,9 @@ def pyx_library(name, deps = [], py_deps = [], srcs = [], **kwargs):
             name = shared_object_name,
             srcs = [stem + ".cpp"],
             deps = deps + [
-            "@rules_python//python/cc:current_py_cc_headers",
-            "@rules_python//python/cc:current_py_cc_libs",
-        ],
+                "@rules_python//python/cc:current_py_cc_headers",
+                "@rules_python//python/cc:current_py_cc_libs",
+            ],
             defines = defines,
             linkshared = 1,
         )
