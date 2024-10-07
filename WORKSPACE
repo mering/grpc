@@ -79,8 +79,8 @@ load("@python_3_11//:defs.bzl", "interpreter")
 
 pip_parse(
     name = "grpc_python_dependencies",
-    requirements_lock = "@com_github_grpc_grpc//:requirements.bazel.txt",
     python_interpreter_target = interpreter,
+    requirements_lock = "@com_github_grpc_grpc//:requirements.bazel.txt",
 )
 
 load("@grpc_python_dependencies//:requirements.bzl", "install_deps")
