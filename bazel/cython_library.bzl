@@ -74,10 +74,8 @@ def pyx_library(name, deps = [], py_deps = [], srcs = [], **kwargs):
             srcs = [stem + ".cpp"],
             deps = deps + [
                 "@rules_python//python/cc:current_py_cc_headers",
-            ] + select({
-                "windows": ["@rules_python//python/cc:current_py_cc_libs"],
-                "default": [],
-            }),
+                "@rules_python//python/cc:current_py_cc_libs",
+            ],
             defines = defines,
             linkshared = 1,
         )
